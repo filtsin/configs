@@ -5,7 +5,7 @@ return require('packer').startup(function()
     use { 'nvim-lualine/lualine.nvim', requires = {'kyazdani42/nvim-web-devicons', opt = true}}
     use 'arkav/lualine-lsp-progress'
 
-    use 'nvim-treesitter/nvim-treesitter'
+    use { 'nvim-treesitter/nvim-treesitter', run = ":TSUpdate" }
 
     use 'neovim/nvim-lspconfig'
     use 'williamboman/nvim-lsp-installer'
