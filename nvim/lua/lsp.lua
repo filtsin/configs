@@ -42,6 +42,12 @@ lsp_installer.on_server_ready(function(server)
         }
 
         require('rust-tools').setup{
+            tools = {
+                inlay_hints = {
+                    parameter_hints_prefix = '🠔  ',
+                    other_hints_prefix = '⇨  '
+                }
+            },
             server = {
                 on_attach = function(client, bufnr)
                     local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
@@ -51,7 +57,7 @@ lsp_installer.on_server_ready(function(server)
 
                 end,
                 cmd = server._default_options.cmd,
-                settings = opts.settings
+                settings = opts.settings,
             }
         }
         return
