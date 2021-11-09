@@ -13,8 +13,8 @@ map('', '<right>', '', {noremap = true, silent = false})
 -- common
 map('i', 'jj', '<Esc>', {noremap = true})
 map('n', '<leader>w', ':w<CR>', default_opts)
-map('n', '<leader>e', ':tabedit <C-R>=expand("%:p:h") . "/"<CR>', default_opts)
-map('n', '<leader>c', ':tabclose', default_opts)
+map('n', '<leader>e', ':RangerNewTab<CR>', default_opts)
+map('n', '<leader>c', ':tabclose<CR>', default_opts)
 
 -- ranger keymap
 map('n', '<leader>q', ':RangerCurrentFile<CR>', default_opts)

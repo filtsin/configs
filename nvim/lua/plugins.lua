@@ -29,6 +29,8 @@ return require('packer').startup(function()
 
     use 'Chiel92/vim-autoformat'
 
+    use { 'alvarosevilla95/luatab.nvim', requires='kyazdani42/nvim-web-devicons' }
+
     use 'lervag/vimtex'
 
     -- for rustfmt
