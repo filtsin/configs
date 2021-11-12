@@ -28,10 +28,12 @@ return require('packer').startup(function()
     use 'folke/lsp-colors.nvim'
 
     use 'Chiel92/vim-autoformat'
+    use 'tpope/vim-fugitive'
 
     use { 'alvarosevilla95/luatab.nvim', requires='kyazdani42/nvim-web-devicons' }
 
     use 'lervag/vimtex'
+    use { 'cespare/vim-toml', branch = 'main' }
 
     -- for rustfmt
     use { 'simrat39/rust-tools.nvim', requires = {'nvim-lua/popup.nvim', 'nvim-lua/plenary.nvim', 'nvim-telescope/telescope.nvim'}}
