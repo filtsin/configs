@@ -4,7 +4,7 @@ local opt = vim.opt
 
 -- Rust autoformat
 vim.api.nvim_command [[
-    autocmd BufWritePre *.rs lua vim.lsp.buf.formatting()
+    autocmd BufWritePre *.rs lua vim.lsp.buf.formatting_sync()
 ]]
 
 -- Statusline: lualine

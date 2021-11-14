@@ -38,6 +38,9 @@ lsp_installer.on_server_ready(function(server)
                 cargo = {
                     allFeatures = true,
                 },
+                rustfmt = {
+                    extraArgs = { "+nightly" }
+                },
             }
         }
 
@@ -49,7 +52,7 @@ lsp_installer.on_server_ready(function(server)
                 }
             },
             server = {
-                on_attach = function(client, bufnr)
+                on_attach = function(_, bufnr)
                     local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
                     local default_opts = { noremap = true, silent = true }
                     buf_set_keymap('n', '<leader>sm', '<cmd>lua require("rust-tools.expand_macro").expand_macro()<CR>', default_opts)
