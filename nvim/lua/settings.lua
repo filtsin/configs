@@ -20,7 +20,7 @@ require('lualine').setup{
 
 -- treesitter
 require('nvim-treesitter.configs').setup{
-    ensure_installed = {'cpp', 'rust', 'toml', 'lua'},
+    ensure_installed = {'cpp', 'rust', 'toml', 'lua', 'latex'},
     highlight = {
         enable = true,
     }
@@ -103,6 +103,7 @@ opt.autoread = true
 opt.clipboard = 'unnamedplus'
 opt.so = 999
 opt.termguicolors = true
+opt.swapfile = false
 
 -- Theme: material
 g.material_theme_style = 'ocean'
