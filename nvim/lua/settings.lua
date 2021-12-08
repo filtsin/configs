@@ -29,6 +29,9 @@ require('nvim-treesitter.configs').setup{
 -- Comment
 require('Comment').setup()
 
+-- code action
+vim.ui.select = require('popui.ui-overrider')
+
 -- Luatab
 require('luatab').setup{
     windowCount = function(index)
