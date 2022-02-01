@@ -29,8 +29,10 @@ require('nvim-treesitter.configs').setup{
 -- Comment
 require('Comment').setup()
 
+
 -- code action
-vim.ui.select = require('popui.ui-overrider')
+--vim.ui.select = require('popui.ui-overrider')
+
 
 -- Luatab
 require('luatab').setup{
@@ -67,6 +69,11 @@ g.vimtex_view_method = 'zathura'
 -- ranger
 g.ranger_replace_netrw = true
 g.ranger_map_keys = 0
+
+-- code-action-menu
+g.code_action_menu_show_details = false
+
+-- grammar check
 
 -- Other params
 cmd [[

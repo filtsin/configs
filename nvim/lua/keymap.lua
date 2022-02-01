@@ -22,10 +22,8 @@ map('n', '<leader>r', ':RangerWorkingDirectory<CR>', default_opts)
 cmd 'command Exp :RangerCurrentFile'
 
 -- lsp
-map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', default_opts)
-map('n', 'gi', '<cmd>lua vim.lsp.buf.implemenation()<CR>', default_opts)
 map('n', '<leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', default_opts)
-map('n', '<space>a', '<cmd>lua vim.lsp.buf.code_action()<CR>', default_opts)
+map('n', '<space>a', ':CodeActionMenu<CR>', default_opts)
 map('n', '<leader>n', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', default_opts)
 map('n', '<leader>p', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', default_opts)
 map('n', '<leader>ff', '<cmd>lua vim.lsp.buf.formatting()<CR>', default_opts)
@@ -34,4 +32,8 @@ map('n', '<leader>ff', '<cmd>lua vim.lsp.buf.formatting()<CR>', default_opts)
 map('n', '<leader>f', '<cmd>lua require("telescope.builtin").find_files()<CR>', default_opts)
 map('n', '<leader>s', '<cmd>lua require("telescope.builtin").live_grep()<CR>', default_opts)
 map('n', '<leader>b', '<cmd>lua require("telescope.builtin").buffers()<CR>', default_opts)
+map('n', '<leader>d', '<cmd>lua require("telescope.builtin").diagnostics()<CR>', default_opts)
+map('n', 'gd', '<cmd>lua require("telescope.builtin").lsp_definitions()<CR>', default_opts)
+map('n', 'gi', '<cmd>lua require("telescope.builtin").lsp_implementations()<CR>', default_opts)
+
 

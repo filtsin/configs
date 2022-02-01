@@ -38,4 +38,6 @@ return require('packer').startup(function()
     use { 'simrat39/rust-tools.nvim', requires = {'nvim-lua/popup.nvim', 'nvim-lua/plenary.nvim', 'nvim-telescope/telescope.nvim'}}
 
     use { 'hood/popui.nvim' }
+
+    use 'weilbith/nvim-code-action-menu'
 end)
