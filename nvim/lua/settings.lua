@@ -9,7 +9,7 @@ vim.api.nvim_command [[
 
 -- Statusline: lualine
 require('lualine').setup{
-    options = { theme = 'nightfly', },
+    options = { theme = 'codedark', },
     sections = {
         lualine_b = {'branch', 'diff',
                       { 'diagnostics', sources={'nvim_diagnostic'}, sections = {'error', 'warn', 'info'}}
@@ -61,6 +61,9 @@ require('luatab').setup{
     end
 }
 
+-- GitSigns
+require('gitsigns').setup{}
+
 -- Latex: vimtex
 g.tex_flavor = 'latex'
 g.vimtex_quickfix_mode = 0
@@ -72,6 +75,7 @@ g.ranger_map_keys = 0
 
 -- code-action-menu
 g.code_action_menu_show_details = false
+g.code_action_menu_show_diff = false
 
 -- grammar check
 
@@ -84,7 +88,7 @@ cmd [[
 -- don't auto commenting new line
 cmd [[au BufEnter * set fo-=c fo-=r fo-=o]]
 
-cmd [[highlight ColorColumn ctermbg=238]]
+cmd [[highlight ColorColumn ctermbg=0]]
 
 opt.shiftwidth = 4
 opt.softtabstop = 4
@@ -116,5 +120,15 @@ opt.termguicolors = true
 opt.swapfile = false
 
 -- Theme: material
-g.material_theme_style = 'ocean'
-cmd 'colorscheme material'
+--g.material_theme_style = 'darker'
+
+require('nightfox').setup({
+    palettes = {
+        nightfox = {
+            bg1 = "#1D1F21"
+        }
+    }
+})
+
+cmd 'colorscheme nightfox'
+

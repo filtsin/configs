@@ -57,6 +57,7 @@ lsp_installer.on_server_ready(function(server)
                     local default_opts = { noremap = true, silent = true }
                     buf_set_keymap('n', '<leader>sm', '<cmd>lua require("rust-tools.expand_macro").expand_macro()<CR>', default_opts)
                     buf_set_keymap('n', '<leader>pr', '<cmd>lua require("rust-tools.parent_module").parent_module()<CR>', default_opts)
+                    require('lsp_signature').on_attach()
 
                 end,
                 cmd = server._default_options.cmd,
@@ -74,6 +75,7 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
 vim.o.completeopt = 'menuone,noselect'
+
 
 local cmp = require 'cmp'
 cmp.setup {

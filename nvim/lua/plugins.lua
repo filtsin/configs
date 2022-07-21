@@ -22,7 +22,7 @@ return require('packer').startup(function()
     use { 'nvim-telescope/telescope.nvim', requires = {'nvim-lua/plenary.nvim'}}
 
     use { 'francoiscabrol/ranger.vim', requires = {'rbgrouleff/bclose.vim'}}
-    use 'airblade/vim-gitgutter'
+    use 'lewis6991/gitsigns.nvim'
     use 'numToStr/Comment.nvim'
     use 'andymass/vim-matchup'
     use 'folke/lsp-colors.nvim'
@@ -40,4 +40,10 @@ return require('packer').startup(function()
     use { 'hood/popui.nvim' }
 
     use 'weilbith/nvim-code-action-menu'
+
+    use 'jbgutierrez/vim-babel'
+
+    use 'ray-x/lsp_signature.nvim'
+
+    use 'EdenEast/nightfox.nvim'
 end)
