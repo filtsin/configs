@@ -4,7 +4,7 @@ local opt = vim.opt
 
 -- Rust autoformat
 vim.api.nvim_command [[
-    autocmd BufWritePre *.rs lua vim.lsp.buf.formatting_sync()
+    autocmd BufWritePre *.rs lua vim.lsp.buf.format()
 ]]
 
 -- Statusline: lualine
@@ -20,7 +20,7 @@ require('lualine').setup{
 
 -- treesitter
 require('nvim-treesitter.configs').setup{
-    ensure_installed = {'cpp', 'rust', 'toml', 'lua', 'latex'},
+    ensure_installed = {'cpp', 'rust', 'toml', 'lua', 'latex', 'regex', 'vim', 'bash' },
     highlight = {
         enable = true,
     }
@@ -64,6 +64,9 @@ require('luatab').setup{
 -- GitSigns
 require('gitsigns').setup{}
 
+-- Noice
+require('noice').setup{}
+
 -- Latex: vimtex
 g.tex_flavor = 'latex'
 g.vimtex_quickfix_mode = 0
@@ -77,6 +80,11 @@ g.ranger_map_keys = 0
 g.code_action_menu_show_details = false
 g.code_action_menu_show_diff = false
 
+-- leetcode
+g.python3_host_prog = "/usr/bin/python3"
+g.python2_host_prog = "/usr/bin/python2"
+g.leetcode_browser = 'chrome'
+
 -- grammar check
 
 -- Other params
@@ -84,9 +92,6 @@ cmd [[
     filetype indent plugin on
     syntax enable
 ]]
-
--- don't auto commenting new line
-cmd [[au BufEnter * set fo-=c fo-=r fo-=o]]
 
 cmd [[highlight ColorColumn ctermbg=0]]
 
@@ -106,7 +111,6 @@ opt.undofile = true
 opt.undodir = '/home/filtsin/.vimdid'
 opt.foldenable = false
 opt.ttyfast = true
-opt.lazyredraw = true
 opt.synmaxcol = 500
 opt.laststatus = 2
 opt.relativenumber = true
@@ -118,6 +122,7 @@ opt.clipboard = 'unnamedplus'
 opt.so = 999
 opt.termguicolors = true
 opt.swapfile = false
+opt.mouse = nil
 
 -- Theme: material
 --g.material_theme_style = 'darker'
