@@ -18,16 +18,20 @@ set $term alacritty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu wofi --show drun
+set $menu yofi
 
 default_border none
+
+seat * hide_cursor 5000
+exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/sway/bg.jpg fill
+output * bg #000000 solid_color
 output HDMI-A-1 resolution 1920x1080 position 0,0
 output DP-1 resolution 3840x2160 position 1920,0
+
 #
 # Example configuration:
 #
@@ -94,6 +98,8 @@ output DP-1 resolution 3840x2160 position 1920,0
     bindsym $mod+Ctrl+space floating toggle
 
     bindsym $mod+Tab focus mode_toggle
+
+    bindsym $mod+z exec grim screenshot.png
 
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
@@ -205,7 +211,6 @@ mode "resize" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-bindsym $mod+z mode "resize"
 
 input * {
     xkb_layout us,ru
