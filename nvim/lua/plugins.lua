@@ -2,13 +2,14 @@ return require('packer').startup(function()
     use 'wbthomason/packer.nvim'
 
     use { 'kaicataldo/material.vim', branch = 'main' }
-    use { 'nvim-lualine/lualine.nvim', requires = {'kyazdani42/nvim-web-devicons', opt = true}}
+    use { 'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true } }
     use 'arkav/lualine-lsp-progress'
 
     use { 'nvim-treesitter/nvim-treesitter', run = ":TSUpdate" }
 
     use 'neovim/nvim-lspconfig'
-    use 'williamboman/nvim-lsp-installer'
+    use 'williamboman/mason.nvim'
+    use 'williamboman/mason-lspconfig.nvim'
 
     use 'hrsh7th/nvim-cmp'
     use 'L3MON4D3/LuaSnip'
@@ -19,9 +20,9 @@ return require('packer').startup(function()
     use 'RishabhRD/nvim-lsputils'
     use 'onsails/lspkind-nvim'
 
-    use { 'nvim-telescope/telescope.nvim', requires = {'nvim-lua/plenary.nvim'}}
+    use { 'nvim-telescope/telescope.nvim', requires = { 'nvim-lua/plenary.nvim' } }
 
-    use { 'francoiscabrol/ranger.vim', requires = {'rbgrouleff/bclose.vim'}}
+    use { 'francoiscabrol/ranger.vim', requires = { 'rbgrouleff/bclose.vim' } }
     use 'lewis6991/gitsigns.nvim'
     use 'numToStr/Comment.nvim'
     use 'andymass/vim-matchup'
@@ -30,32 +31,28 @@ return require('packer').startup(function()
     use 'Chiel92/vim-autoformat'
     use 'tpope/vim-fugitive'
 
-    use { 'alvarosevilla95/luatab.nvim', requires='kyazdani42/nvim-web-devicons' }
+    use { 'alvarosevilla95/luatab.nvim', requires = 'kyazdani42/nvim-web-devicons' }
 
     use 'lervag/vimtex'
     use { 'cespare/vim-toml', branch = 'main' }
 
-    use { 'simrat39/rust-tools.nvim', requires = {'nvim-lua/popup.nvim', 'nvim-lua/plenary.nvim', 'nvim-telescope/telescope.nvim'}}
+    use { 'simrat39/rust-tools.nvim', requires = { 'nvim-lua/popup.nvim', 'nvim-lua/plenary.nvim', 'nvim-telescope/telescope.nvim' } }
 
     use { 'hood/popui.nvim' }
 
     use 'weilbith/nvim-code-action-menu'
 
-    use 'jbgutierrez/vim-babel'
-
     use 'ray-x/lsp_signature.nvim'
 
     use 'EdenEast/nightfox.nvim'
 
+    use 'folke/neodev.nvim'
+
     use({
-      "folke/noice.nvim",
-      requires = {
-        -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
-        "MunifTanjim/nui.nvim",
-        -- OPTIONAL:
-        --   `nvim-notify` is only needed, if you want to use the notification view.
-        --   If not available, we use `mini` as the fallback
-        "rcarriga/nvim-notify",
+        "folke/noice.nvim",
+        requires = {
+            "MunifTanjim/nui.nvim",
+            "rcarriga/nvim-notify",
         }
     })
 end)

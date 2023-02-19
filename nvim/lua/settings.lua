@@ -20,9 +20,23 @@ require('lualine').setup{
 
 -- treesitter
 require('nvim-treesitter.configs').setup{
-    ensure_installed = {'cpp', 'rust', 'toml', 'lua', 'latex', 'regex', 'vim', 'bash' },
+    ensure_installed = {
+        'cpp',
+        'rust',
+        'toml',
+        'lua',
+        'latex',
+        'regex',
+        'vim',
+        'bash',
+        'markdown',
+        'markdown_inline'
+    },
     highlight = {
         enable = true,
+    },
+    autotag = {
+        enable = true
     }
 }
 
@@ -65,7 +79,15 @@ require('luatab').setup{
 require('gitsigns').setup{}
 
 -- Noice
-require('noice').setup{}
+require('noice').setup({
+    lsp = {
+        override = {
+          ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
+          ["vim.lsp.util.stylize_markdown"] = true,
+          ["cmp.entry.get_documentation"] = true,
+        },
+    },
+})
 
 -- Latex: vimtex
 g.tex_flavor = 'latex'

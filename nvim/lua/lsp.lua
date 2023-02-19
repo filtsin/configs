@@ -1,32 +1,53 @@
 -- nvim-lsp-installer settings
 
-local lsp_installer = require 'nvim-lsp-installer'
+require("neodev").setup({
+  -- add any options here, or leave empty to use the default settings
+})
 
-lsp_installer.on_server_ready(function(server)
-    local opts = {}
+require('mason').setup{}
+local lsp_config = require('lspconfig')
 
-    if server.name == "sumneko_lua" then
+require('mason-lspconfig').setup({
+    ensure_installed = {
+        'lua_ls',
+        'rust_analyzer',
+    }
+})
+
+
+require('mason-lspconfig').setup_handlers({
+    function(server_name)
+        require('lspconfig')[server_name].setup{}
+    end,
+
+    ['lua_ls'] = function()
         -- only apply these settings for the "sumneko_lua" server
-        opts.settings = {
-            Lua = {
-                diagnostics = {
-                    -- Get the language server to recognize the 'vim', 'use' global
-                    globals = {'vim', 'use'},
+        lsp_config.lua_ls.setup{
+            settings = {
+                Lua = {
+                    runtime = {
+                        version = 'LuaJIT'
+                    },
+                    diagnostics = {
+                        -- Get the language server to recognize the 'vim', 'use' global
+                        globals = {'vim', 'use'},
+                    },
+                    workspace = {
+                        -- Make the server aware of Neovim runtime files
+                        library = vim.api.nvim_get_runtime_file("", true),
+                        checkThirdParty = false
+                    },
+                    -- Do not send telemetry data containing a randomized but unique identifier
+                    telemetry = {
+                        enable = false,
+                    },
                 },
-                workspace = {
-                    -- Make the server aware of Neovim runtime files
-                    library = vim.api.nvim_get_runtime_file("", true),
-                },
-                -- Do not send telemetry data containing a randomized but unique identifier
-                telemetry = {
-                    enable = false,
-                },
-            },
+            }
         }
-    end
+    end,
 
-    if server.name == 'rust_analyzer' then
-        opts.settings = {
+    ['rust_analyzer'] = function()
+        local rust_settings = {
             ['rust-analyzer'] = {
                 assist = {
                     importGranularity = 'module',
@@ -44,6 +65,10 @@ lsp_installer.on_server_ready(function(server)
             }
         }
 
+        lsp_config.rust_analyzer.setup({
+            settings = rust_settings
+        })
+
         require('rust-tools').setup{
             tools = {
                 inlay_hints = {
@@ -60,15 +85,12 @@ lsp_installer.on_server_ready(function(server)
                     -- require('lsp_signature').on_attach() turned on in noice by default
 
                 end,
-                cmd = server._default_options.cmd,
-                settings = opts.settings,
+                settings = rust_settings,
             }
         }
-        return
     end
+})
 
-    server:setup(opts)
-end)
 
 -- nvim-cmp settings
 local capabilities = vim.lsp.protocol.make_client_capabilities()
