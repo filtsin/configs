@@ -13,6 +13,10 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+local is_git_folder = function()
+    return os.execute('git rev-parse --is-inside-work-tree') == 0
+end
+
 require('lazy').setup({
     {
         'EdenEast/nightfox.nvim',
@@ -64,7 +68,7 @@ require('lazy').setup({
     {
         'hrsh7th/nvim-cmp',
         lazy = true,
-        event = C.mason_lazy,
+        event = 'InsertEnter',
         dependencies = {
             'L3MON4D3/LuaSnip',
             'hrsh7th/cmp-buffer',
@@ -98,7 +102,13 @@ require('lazy').setup({
 
     {
         'lewis6991/gitsigns.nvim',
+        cond = is_git_folder,
         config = true,
+    },
+
+    {
+        'tpope/vim-fugitive',
+        cond = is_git_folder,
     },
 
     {
@@ -124,8 +134,6 @@ require('lazy').setup({
     },
 
     'folke/lsp-colors.nvim',
-    'tpope/vim-fugitive',
-
 },
     {
         install = {
