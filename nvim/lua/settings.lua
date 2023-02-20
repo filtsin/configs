@@ -15,7 +15,7 @@ require('lualine').setup{
                       { 'diagnostics', sources={'nvim_diagnostic'}, sections = {'error', 'warn', 'info'}}
                      },
         lualine_c = { {'filename', path=1}, 'lsp_progress' }
-    }
+    },
 }
 
 -- treesitter

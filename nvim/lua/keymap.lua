@@ -16,10 +16,6 @@ map('i', 'jj', '<Esc>', { noremap = true })
 map('n', '<leader>w', ':w<CR>', default_opts)
 map('n', '<leader>e', ':RangerNewTab<CR>', default_opts)
 map('n', '<leader>c', ':tabclose<CR>', default_opts)
-map('n', '<leader>1', '1gt', default_opts)
-map('n', '<leader>2', '2gt', default_opts)
-map('n', '<leader>3', '3gt', default_opts)
-map('n', '<leader>4', '4gt', default_opts)
 
 -- ranger keymap
 map('n', '<leader>q', ':RangerCurrentFile<CR>', default_opts)
@@ -41,3 +37,7 @@ map('n', '<leader>b', '<cmd>lua require("telescope.builtin").buffers()<CR>', def
 map('n', '<leader>d', '<cmd>lua require("telescope.builtin").diagnostics()<CR>', default_opts)
 map('n', 'gd', '<cmd>lua require("telescope.builtin").lsp_definitions()<CR>', default_opts)
 map('n', 'gi', '<cmd>lua require("telescope.builtin").lsp_implementations()<CR>', default_opts)
+
+-- clangd
+map('n', '<space>t', ':ClangdSwitchSourceHeader<CR>', default_opts)
+
