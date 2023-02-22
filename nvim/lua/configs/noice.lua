@@ -6,12 +6,14 @@ local setup = function()
                 ["vim.lsp.util.stylize_markdown"] = true,
                 ["cmp.entry.get_documentation"] = true,
             },
+            signature = {
+                enabled = false
+            },
         },
         routes = {
             {
                 filter = {
                     event = "msg_show",
-                    kind = "",
                     find = "written",
                 },
                 opts = { skip = true },
@@ -19,11 +21,17 @@ local setup = function()
             {
                 filter = {
                     event = "msg_show",
-                    kind = "",
                     find = "before #",
                 },
                 opts = { skip = true },
             },
+            {
+                filter = {
+                    event = "msg_show",
+                    find = "E37:",
+                },
+                opts = { skip = true },
+            }
         },
         views = {
             cmdline_popup = {

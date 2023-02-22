@@ -13,9 +13,7 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-local is_git_folder = function()
-    return os.execute('git rev-parse --is-inside-work-tree') == 0
-end
+local is_git_folder = os.execute('git rev-parse --is-inside-work-tree') == 0
 
 require('lazy').setup({
     {
@@ -37,17 +35,14 @@ require('lazy').setup({
     },
 
     {
-        'neovim/nvim-lspconfig',
-        lazy = true,
-        event = C.mason_lazy,
-        -- don't call setup because of mason
-    },
-
-    {
         'williamboman/mason.nvim',
         lazy = true,
         event = C.mason_lazy,
-        dependencies = { 'williamboman/mason-lspconfig.nvim' },
+        dependencies = {
+            'williamboman/mason-lspconfig.nvim',
+            'neovim/nvim-lspconfig',
+            'ray-x/lsp_signature.nvim'
+        },
         config = C.mason
     },
 
@@ -132,8 +127,6 @@ require('lazy').setup({
         event = 'BufReadPre *.lua',
         config = true
     },
-
-    'folke/lsp-colors.nvim',
 },
     {
         install = {

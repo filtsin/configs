@@ -80,6 +80,7 @@ end
 
 local setup = function()
     require('lspconfig')
+    require('lsp_signature').setup{}
     require('mason').setup {}
     local mason = require('mason-lspconfig')
 
@@ -97,7 +98,7 @@ local setup = function()
         ['clangd'] = setup_clangd,
     }
 
-    vim.keymap.set('n', '<leader>2', vim.lsp.buf.format)
+    vim.keymap.set('n', '<leader>z', vim.lsp.buf.format)
 end
 
 local lazy_load = function()
