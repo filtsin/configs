@@ -14,6 +14,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local is_git_folder = os.execute('git rev-parse --is-inside-work-tree') == 0
+local mason_lazy = C.mason_lazy()
 
 require('lazy').setup({
     {
@@ -37,7 +38,7 @@ require('lazy').setup({
     {
         'williamboman/mason.nvim',
         lazy = true,
-        event = C.mason_lazy,
+        event = mason_lazy,
         dependencies = {
             'williamboman/mason-lspconfig.nvim',
             'neovim/nvim-lspconfig',
@@ -56,8 +57,14 @@ require('lazy').setup({
     {
         'glepnir/lspsaga.nvim',
         lazy = true,
-        event = C.mason_lazy,
+        event = mason_lazy,
         config = C.lspsaga
+    },
+
+    {
+        'L3MON4D3/LuaSnip',
+        build = "make install_jsregexp",
+        config = C.luasnip
     },
 
     {
@@ -65,7 +72,7 @@ require('lazy').setup({
         lazy = true,
         event = 'InsertEnter',
         dependencies = {
-            'L3MON4D3/LuaSnip',
+            'saadparwaiz1/cmp_luasnip',
             'hrsh7th/cmp-buffer',
             'hrsh7th/cmp-path',
             'hrsh7th/cmp-nvim-lsp',
@@ -73,6 +80,7 @@ require('lazy').setup({
         },
         config = C.cmp,
     },
+
 
     {
         'nvim-telescope/telescope.nvim',
@@ -91,7 +99,7 @@ require('lazy').setup({
     {
         'numToStr/Comment.nvim',
         lazy = true,
-        event = C.mason_lazy,
+        event = mason_lazy,
         config = true
     },
 
