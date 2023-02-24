@@ -55,6 +55,14 @@ require('lazy').setup({
     },
 
     {
+        'saecki/crates.nvim',
+        lazy = true,
+        event = 'BufRead Cargo.toml',
+        dependencies = { 'nvim-lua/plenary.nvim' },
+        config = C.crates,
+    },
+
+    {
         'glepnir/lspsaga.nvim',
         lazy = true,
         event = mason_lazy,

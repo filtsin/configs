@@ -9,7 +9,7 @@ local tab_mapping = function()
 
     return cmp.mapping(function(fallback)
         if cmp.visible() then
-            cmp.select_next_item({ behavior = cmp.SelectBehavior.Select })
+            cmp.select_next_item()
             -- You could replace the expand_or_jumpable() calls with expand_or_locally_jumpable()
             -- they way you will only jump inside the snippet region
         elseif luasnip.expand_or_jumpable() then
@@ -28,7 +28,7 @@ local shift_tab_mapping = function()
 
     return cmp.mapping(function(fallback)
         if cmp.visible() then
-            cmp.select_prev_item({ behavior = cmp.SelectBehavior.Select })
+            cmp.select_prev_item()
         elseif luasnip.jumpable( -1) then
             luasnip.jump( -1)
         else
@@ -54,7 +54,8 @@ local setup = function()
             { name = 'nvim_lsp' },
             { name = 'buffer' },
             { name = 'path' },
-            { name = 'luasnip' }
+            { name = 'luasnip' },
+            { name = 'crates' }
         },
         mapping = {
             ['<C-Space>'] = cmp.mapping.complete({}),

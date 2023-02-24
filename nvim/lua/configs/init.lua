@@ -13,5 +13,6 @@ M.noice = require('configs.noice').setup
 M.rust_tools = require('configs.rust_tools').setup
 M.lspsaga = require('configs.lspsaga').setup
 M.luasnip = require('configs.luasnip').setup
+M.crates = require('configs.crates').setup
 
 return M

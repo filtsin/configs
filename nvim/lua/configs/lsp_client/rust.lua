@@ -25,13 +25,6 @@ local setup = function()
             }
         },
 
-        server = {
-            on_attach = function(_, _)
-                vim.keymap.set('n', '<leader>sm', function() require('rust-tools.expand_macro').expand_macro() end)
-                vim.keymap.set('n', '<leader>pr', function() require('rust-tools.parent_module').parent_module() end)
-            end,
-        },
-
         settings = settings
     }
 end
