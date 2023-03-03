@@ -83,6 +83,8 @@ output DP-1 resolution 3840x2160 position 1920,0
 
     bindsym $mod+f exec $term -e ranger
 
+    bindsym $mod+e exec $term -e $HOME/.config/sway/run-nvim.sh
+
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
     # Despite the name, also works for non-floating windows.
@@ -92,8 +94,6 @@ output DP-1 resolution 3840x2160 position 1920,0
 
     # Reload the configuration file
     bindsym $mod+Shift+r reload
-
-    bindsym $mod+space layout toggle split
 
     bindsym $mod+Ctrl+space floating toggle
 
@@ -165,7 +165,7 @@ output DP-1 resolution 3840x2160 position 1920,0
 
     # Switch the current container between different layout styles
     bindsym $mod+t layout tabbed
-    bindsym $mod+e layout toggle split
+    bindsym $mod+space layout toggle split
 
     # Make the current focus fullscreen
     bindsym $mod+s fullscreen
