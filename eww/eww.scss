@@ -1,0 +1,67 @@
+$background: #1a1b26;
+$selected_color: #fcba03;
+
+* {
+    all: unset;
+    background-color: $background;
+    font-family: "JetBrains Mono"
+}
+
+.bar_0 {
+    font-size: 24px;
+    .workspace {
+        font-size: 20px
+    }
+    .active_workspace {
+        font-size: 24px;
+    }
+}
+
+.bar_1 {
+    font-size: 20px;
+    .workspace {
+        font-size: 16px;
+    }
+    .active_workspace {
+        font-size: 20px;
+    }
+}
+
+.workspace label {
+    padding: 10px;
+}
+
+.active_workspace {
+    color: $selected_color;
+}
+
+.volbar trough highlight {
+  all: unset;
+  background-color: #D35D6E;
+  color: #000000;
+  border-radius: 10px;
+}
+
+.volbar trough {
+  all: unset;
+  background-color: #4e4e4e;
+  border-radius: 50px;
+  min-height: 10px;
+  min-width: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.volume, .language, .clock, .date {
+    margin-right: 10px;
+}
+
+.calendar {
+    padding: 10px;
+    font-size: 24px;
+}
+
+.calendar:selected {
+    color: $selected_color;
+}
+
