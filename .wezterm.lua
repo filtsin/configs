@@ -11,6 +11,7 @@ if wezterm.config_builder then
   config = wezterm.config_builder()
 end
 
+config.default_prog = { '/usr/bin/fish' }
 
 config.colors = {
     background = '#1d1f21',
@@ -21,11 +22,11 @@ config.hide_tab_bar_if_only_one_tab = true
 config.use_fancy_tab_bar = false
 config.font_size = 14
 config.tab_max_width = 30
-
+config.window_close_confirmation = 'NeverPrompt'
 
 config.keys = {
     {
-        key = 'x',
+        key = 'c',
         mods = 'CTRL',
         action = act.CloseCurrentTab({ confirm = true})
     },
