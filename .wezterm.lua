@@ -26,7 +26,7 @@ config.window_close_confirmation = 'NeverPrompt'
 
 config.keys = {
     {
-        key = 'c',
+        key = 'x',
         mods = 'CTRL',
         action = act.CloseCurrentTab({ confirm = false })
     },
