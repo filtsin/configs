@@ -28,7 +28,7 @@ config.keys = {
     {
         key = 'c',
         mods = 'CTRL',
-        action = act.CloseCurrentTab({ confirm = true})
+        action = act.CloseCurrentTab({ confirm = false })
     },
     {
         key = 't',
