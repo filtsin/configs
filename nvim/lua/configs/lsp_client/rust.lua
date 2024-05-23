@@ -5,6 +5,9 @@ local setup = function()
                 importGranularity = 'module',
                 importPrefix = 'by_self'
             },
+            inlayHints = {
+                parameterHints = false,
+            },
             checkOnSave = {
                 command = 'clippy'
             },
@@ -17,15 +20,15 @@ local setup = function()
         }
     }
 
-    require('rust-tools').setup {
-        tools = {
-            inlay_hints = {
-                parameter_hints_prefix = '🠔  ',
-                other_hints_prefix = '⇨  '
-            }
-        },
-
-        settings = settings
+    vim.g.rustaceanvim = {
+        server = {
+            on_attach = function(_, _)
+                vim.api.nvim_command [[
+                    autocmd BufWritePre *.rs lua vim.lsp.buf.format()
+                ]]
+            end,
+            default_settings = settings,
+        }
     }
 end
 

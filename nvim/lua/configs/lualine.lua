@@ -5,7 +5,14 @@ local setup = function()
             lualine_b = { 'branch', 'diff',
                 { 'diagnostics', sources = { 'nvim_diagnostic' }, sections = { 'error', 'warn', 'info' } }
             },
-            lualine_c = { { 'filename', path = 1 }, 'lsp_progress' }
+            lualine_c = { { 'filename', path = 1 }, 'lsp_progress' },
+            lualine_x = {
+                {
+                    require('noice.api.status').mode.get,
+                    cond = require('noice.api.status').mode.has,
+                    color = { fg = '#ff9e64' },
+                }
+            }
         },
     }
 end

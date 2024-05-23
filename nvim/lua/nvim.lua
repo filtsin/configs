@@ -2,6 +2,7 @@ local opt = vim.opt
 local cmd = vim.cmd
 
 cmd [[
+    set mouse=
     filetype indent plugin on
     syntax enable
 ]]
@@ -36,7 +37,6 @@ opt.colorcolumn = '100'
 opt.showcmd = true
 opt.autoread = true
 opt.clipboard = 'unnamedplus'
-opt.so = 999
 opt.termguicolors = true
 opt.swapfile = false
 opt.mouse = nil

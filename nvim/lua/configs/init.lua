@@ -10,9 +10,9 @@ M.telescope_keys = require('configs.telescope').keys
 M.ranger = require('configs.ranger').setup
 M.luatab = require('configs.luatab').setup
 M.noice = require('configs.noice').setup
-M.rust_tools = require('configs.rust_tools').setup
 M.lspsaga = require('configs.lspsaga').setup
 M.luasnip = require('configs.luasnip').setup
 M.crates = require('configs.crates').setup
+M.oil = require('configs.oil').setup
 
 return M
