@@ -31,7 +31,6 @@ require('lazy').setup({
 
         {
             'nvim-treesitter/nvim-treesitter',
-            dependencies = { 'andymass/vim-matchup' },
             config = C.treesitter
         },
 
@@ -112,14 +111,6 @@ require('lazy').setup({
         },
 
         {
-            'filtsin/yazi.nvim',
-            priority = 998,
-            config = C.ranger,
-            dev = true
-        },
-
-
-        {
             'numToStr/Comment.nvim',
             lazy = true,
             event = mason_lazy,
@@ -140,9 +131,6 @@ require('lazy').setup({
         {
             'alvarosevilla95/luatab.nvim',
             lazy = true,
-            keys = {
-                { '<leader>e', ':RangerNewTab<CR>', desc = "Ranger new tab" }
-            },
             config = C.luatab
         },
 
@@ -160,17 +148,24 @@ require('lazy').setup({
         },
 
         {
-            'arnamak/stay-centered.nvim',
-            config = true
+            'folke/flash.nvim',
+            event = 'VeryLazy',
+            config = C.flash
         },
 
         {
             'nvim-pack/nvim-spectre',
             config = true
+        },
+
+        {
+            'folke/tokyonight.nvim',
+            priority = 1000,
+            config = C.tokyonight
         }
     },
     {
         install = {
-            colorscheme = { 'nightfox' }
+            colorscheme = { 'tokyonight' }
         }
     })
