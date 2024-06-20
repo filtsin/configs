@@ -1,0 +1,13 @@
+[helpers]
+
+[common.variables]
+font_name = "JetBrains Mono"
+
+[default]
+depends = ["common"]
+
+[default.files]
+"yofi.toml" = "~/.config/yofi/yofi.config"
+"waybar/config.json" = "~/.config/waybar/config"
+"waybar/style.css" = "~/.config/waybar/style.css"
+

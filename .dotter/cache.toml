@@ -1,0 +1,6 @@
+[symlinks]
+"waybar/config.json" = "/home/filtsin/.config/waybar/config"
+
+[templates]
+"waybar/style.css" = "/home/filtsin/.config/waybar/style.css"
+"yofi.toml" = "/home/filtsin/.config/yofi/yofi.config"

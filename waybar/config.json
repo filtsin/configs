@@ -1,0 +1,116 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 33,
+    "modules-left": [
+        "custom/archlogo",
+        "hyprland/workspaces",
+        "cpu",
+        "custom/separator",
+        "memory",
+        "custom/separator",
+        "network" 
+    ],
+    "modules-center": ["hyprland/window"],
+    "modules-right": [
+        "hyprland/language",
+        "custom/separator",
+        "pulseaudio",
+        "pulseaudio#microphone",
+        "custom/separator",
+        "clock"
+    ],
+    "custom/archlogo": {
+        "format": "󰣇",
+        "tooltip": false,
+        "on-click": "yofi"
+    },
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "separated-outputs": true
+    },
+    "cpu": {
+        "interval": 3,
+        "format": "󰍛 {usage}%",
+        "tooltip": false,
+        "on-click": "wezterm -e 'htop'"
+    },
+    "custom/separator": {
+        "format": "|",
+        "interval": "once",
+        "tooltip": false
+    },
+    "memory": {
+        "interval": 3,
+        "format": "  {used:0.2f}gb",
+        "max-length": 10,
+        "tooltip": false
+    },
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": "  ({signalStrength}%)",
+        "format-ethernet": "󰈀  {ifname}: {ipaddr}/{cidr}",
+        "format-linked": "󱚵  {ifname} (No IP)",
+        "format-disconnected": "󰖪  Disconnected",
+        "format-alt": "󰩠  {ifname}: {ipaddr}/{cidr}",
+        "tooltip-format": "{essid}: {ipaddr}"
+    },
+    "hyprland/window": {
+        "max-length": 150,
+        "separate-outputs": true
+    },
+    "hyprland/language": {
+        "format": "{}",
+        "format-en": "🇺🇸",
+        "format-ru": "🇷🇺"
+    },
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-bluetooth": "󰂯  {icon} {volume}%",
+        "format-bluetooth-muted": "󰗿 ",
+        "format-muted": "󰝟 ",
+        "format-icons": {
+            "default": [" ", " ", " "]
+        },
+        "on-scroll-up": "pamixer -i 5",
+        "on-scroll-down": "pamixer -d 5",
+        "on-click": "pamixer -t"
+    },
+    "pulseaudio#microphone": {
+        "format": "{format_source}",
+        "format-source": " {volume}%",
+        "format-source-muted": " ",
+        "on-scroll-up": "pamixer --default-source -i 5",
+        "on-scroll-down": "pamixer --default-source -d 5",
+        "on-click": "pamixer --default-source -t"
+    },
+    "clock": {
+        "interval": 1,
+        "locale": "C", 
+        "format": " {:%I:%M %p}",
+        "format-alt": "  {:%A, %B %d, %Y (%R)}",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+                    "mode"          : "year",
+                    "mode-mon-col"  : 3,
+                    "weeks-pos"     : "right",
+                    "on-scroll"     : 1,
+                    "on-click-right": "mode",
+                    "format": {
+                              "months":     "<span color='#ffead3'><b>{}</b></span>",
+                              "days":       "<span color='#ecc6d9'><b>{}</b></span>",
+                              "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
+                              "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+                              "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+                              }
+                    },
+        "actions":  {
+                    "on-click-right": "mode",
+                    "on-click-forward": "tz_up",
+                    "on-click-backward": "tz_down",
+                    "on-scroll-up": "shift_up",
+                    "on-scroll-down": "shift_down"
+        }
+    }
+}
+
