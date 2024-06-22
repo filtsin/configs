@@ -61,7 +61,7 @@ window#waybar {
 }
 
 #custom-separator {
-    color: #2e2e2e;
+    color: rgba(255, 255, 255, 0.4);
 }
 
 #network {

@@ -49,8 +49,8 @@
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "  ({signalStrength}%)",
-        "format-ethernet": "󰈀  {ifname}: {ipaddr}/{cidr}",
-        "format-linked": "󱚵  {ifname} (No IP)",
+        "format-ethernet": "󰈀 {ipaddr}/{cidr}",
+        "format-linked": "󱚵 {ifname} (No IP)",
         "format-disconnected": "󰖪  Disconnected",
         "format-alt": "󰩠  {ifname}: {ipaddr}/{cidr}",
         "tooltip-format": "{essid}: {ipaddr}"
@@ -66,11 +66,11 @@
     },
     "pulseaudio": {
         "format": "{icon} {volume}%",
-        "format-bluetooth": "󰂯  {icon} {volume}%",
+        "format-bluetooth": "󰂯 {icon} {volume}%",
         "format-bluetooth-muted": "󰗿 ",
         "format-muted": "󰝟 ",
         "format-icons": {
-            "default": [" ", " ", " "]
+            "default": ["", "", " "]
         },
         "on-scroll-up": "pamixer -i 5",
         "on-scroll-down": "pamixer -d 5",
@@ -88,7 +88,7 @@
         "interval": 1,
         "locale": "C", 
         "format": " {:%I:%M %p}",
-        "format-alt": "  {:%A, %B %d, %Y (%R)}",
+        "format-alt": " {:%A, %B %d, %Y (%R)}",
         "tooltip-format": "<tt><small>{calendar}</small></tt>",
         "calendar": {
                     "mode"          : "year",
