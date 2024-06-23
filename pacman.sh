@@ -11,7 +11,14 @@ packages=(
     ttf-jetbrains-mono # jetbrains font
     noto-fonts-emoji # emoji
     fish # shell
+    fisher # plugin manager for fish
     wezterm-git # terminal
+    zoxide # smart cd command
+    fzf # fuzzy finder
+    fd # alternative to find
+    lsd # alternative to ls
+    bat # alternative to cat
+    ripgrep # alternative to grep
 )
 
 # Not full list

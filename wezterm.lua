@@ -20,7 +20,7 @@ config.colors = {
 
 config.hide_tab_bar_if_only_one_tab = true
 config.use_fancy_tab_bar = false
-config.font_size = 16
+config.font_size = 22
 config.tab_max_width = 30
 config.window_close_confirmation = 'NeverPrompt'
 
