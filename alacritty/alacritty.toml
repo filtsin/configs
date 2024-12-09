@@ -18,7 +18,7 @@ background = "#1d1f21" # 131f21 looks fancy
 [colors.normal]
 black   = '#110f18'
 red     = '#ff6767'
-green   = '#61ffca'
+green   = '#53f855'
 yellow  = '#ffca85'
 blue    = '#a277ff'
 magenta = '#a277ff'
@@ -29,7 +29,7 @@ white   = '#edecee'
 [colors.bright]
 black   = '#4d4d4d'
 red     = '#ff6767'
-green   = '#61ffca'
+green   = '#85f855'
 yellow  = '#ffca85'
 blue    = '#a277ff'
 magenta = '#a277ff'
