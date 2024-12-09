@@ -31,6 +31,13 @@ local setup = function()
                     find = "E37:",
                 },
                 opts = { skip = true },
+            },
+            {
+                filter = {
+                    event = "msg_show",
+                    find = "Invalid offset LineCol",
+                },
+                opts = { skip = true },
             }
         },
         views = {

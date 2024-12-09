@@ -159,10 +159,18 @@ require('lazy').setup({
         },
 
         {
+            'danymat/neogen',
+            config = true,
+            keys = {
+                { '<leader>ng', '<cmd>:Neogen<cr>', 'Generate documentation' }
+            }
+        },
+
+        {
             'folke/tokyonight.nvim',
             priority = 1000,
             config = C.tokyonight
-        }
+        },
     },
     {
         install = {

@@ -1,5 +1,8 @@
 local setup = function()
-    require('lspconfig').clangd.setup {}
+    require('lspconfig').clangd.setup {
+        cmd = { 'clangd', '--background-index', '--clang-tidy' },
+        filetypes = { "c", "cpp", "objc", "objcpp", "cuda" },
+    }
     vim.keymap.set('n', '<space>t', ':ClangdSwitchSourceHeader<CR>')
 end
 

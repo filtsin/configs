@@ -11,6 +11,7 @@ depends = ["common"]
 "waybar/config.json" = "~/.config/waybar/config"
 "waybar/style.css" = "~/.config/waybar/style.css"
 "wezterm.lua" = "~/.wezterm.lua"
+"alacritty" = "~/.config/alacritty"
 "nvim" = { target = "~/.config/nvim/", type = "symbolic" }
 "hypr" = "~/.config/hypr/"
 "fish" = "~/.config/fish"
