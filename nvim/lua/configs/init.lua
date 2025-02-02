@@ -15,5 +15,6 @@ M.crates = require('configs.crates').setup
 M.oil = require('configs.oil').setup
 M.flash = require('configs.flash').setup
 M.tokyonight = require('configs.tokyonight').setup
+M.jellybeans = require('configs.jellybeans').setup
 
 return M

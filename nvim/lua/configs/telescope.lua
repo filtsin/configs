@@ -6,6 +6,7 @@ local keys = function()
         { '<leader>b', '<cmd>lua require("telescope.builtin").buffers()<CR>' },
         { '<leader>d', '<cmd>lua require("telescope.builtin").diagnostics()<CR>' },
         { 'gd',        '<cmd>lua require("telescope.builtin").lsp_definitions()<CR>' },
+        { 'gh',        '<cmd>lua require("telescope.builtin").lsp_references()<CR>' },
         { 'gi',        '<cmd>lua require("telescope.builtin").lsp_implementations()<CR>' },
     }
 

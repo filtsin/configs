@@ -167,13 +167,13 @@ require('lazy').setup({
         },
 
         {
-            'folke/tokyonight.nvim',
+            'WTFox/jellybeans.nvim',
             priority = 1000,
-            config = C.tokyonight
-        },
+            config = C.jellybeans
+        }
     },
     {
         install = {
-            colorscheme = { 'tokyonight' }
+            colorscheme = { 'jellybeans' }
         }
     })

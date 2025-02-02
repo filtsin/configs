@@ -14,7 +14,7 @@ local setup = function()
         },
     }
 
-    keymap('n', 'gh', '<cmd>Lspsaga finder<CR>')
+    -- keymap('n', 'gh', '<cmd>Lspsaga finder<CR>')
     keymap('n', '<space>a', '<cmd>Lspsaga code_action<CR>')
     keymap('n', '<leader>d', '<cmd>Lspsaga goto definition<CR>')
     keymap('n', '<leader>p', '<cmd>Lspsaga peek_definition<CR>')

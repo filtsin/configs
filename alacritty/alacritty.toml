@@ -12,7 +12,7 @@ draw_bold_text_with_bright_colors = true
 
 [colors.primary]
 foreground = "#c5c8c6"
-background = "#1d1f21" # 131f21 looks fancy
+background = "#151515" # 131f21 looks fancy
 
 # Normal colors
 [colors.normal]

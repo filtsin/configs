@@ -1,6 +1,6 @@
 local setup = function()
     require('lualine').setup {
-        options = { theme = 'codedark', },
+        options = { theme = 'jellybeans', },
         sections = {
             lualine_b = { 'branch', 'diff',
                 { 'diagnostics', sources = { 'nvim_diagnostic' }, sections = { 'error', 'warn', 'info' } }
