@@ -16,5 +16,6 @@ M.oil = require('configs.oil').setup
 M.flash = require('configs.flash').setup
 M.tokyonight = require('configs.tokyonight').setup
 M.jellybeans = require('configs.jellybeans').setup
+M.llm = require('configs.llm').setup
 
 return M

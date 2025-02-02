@@ -29,8 +29,8 @@ local shift_tab_mapping = function()
     return cmp.mapping(function(fallback)
         if cmp.visible() then
             cmp.select_prev_item()
-        elseif luasnip.jumpable( -1) then
-            luasnip.jump( -1)
+        elseif luasnip.jumpable(-1) then
+            luasnip.jump(-1)
         else
             fallback()
         end
@@ -43,8 +43,17 @@ local setup = function()
 
     vim.o.completeopt = 'menuone,noselect'
 
+
     local cmp = require 'cmp'
     cmp.setup {
+        window = {
+            documentation = cmp.config.window.bordered({
+                winhighlight = "normal:normal,floatborder:borderbg,cursorline:pmenusel,search:none"
+            }),
+            completion = cmp.config.window.bordered({
+                winhighlight = "normal:normal,floatborder:borderbg,cursorline:pmenusel,search:none"
+            }),
+        },
         snippet = {
             expand = function(args)
                 require('luasnip').lsp_expand(args.body)

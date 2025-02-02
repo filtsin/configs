@@ -1,6 +1,8 @@
 local setup = function()
     local keymap = vim.keymap.set
 
+    vim.api.nvim_set_hl(0, 'NormalFloat', { link = 'None' })
+
     require('lspsaga').setup {
         outline = {
             win_position = "left",

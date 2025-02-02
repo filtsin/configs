@@ -170,6 +170,11 @@ require('lazy').setup({
             'WTFox/jellybeans.nvim',
             priority = 1000,
             config = C.jellybeans
+        },
+
+        {
+            'huggingface/llm.nvim',
+            config = C.llm
         }
     },
     {

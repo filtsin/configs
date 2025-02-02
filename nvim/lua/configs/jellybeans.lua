@@ -1,8 +1,5 @@
 local setup = function()
-    require('jellybeans').setup {
-        plugins = {
-        }
-    }
+    require('jellybeans').setup { }
     vim.cmd('colorscheme jellybeans')
 end
 
