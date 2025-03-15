@@ -167,15 +167,16 @@ require('lazy').setup({
         },
 
         {
+            'bassamsdata/namu.nvim',
+            config = true,
+        },
+
+        {
             'WTFox/jellybeans.nvim',
             priority = 1000,
             config = C.jellybeans
         },
 
-        {
-            'huggingface/llm.nvim',
-            config = C.llm
-        }
     },
     {
         install = {
