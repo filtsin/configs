@@ -17,6 +17,20 @@ window#waybar {
     min-width: 36px;
 }
 
+#taskbar button {
+    color: #ffffff;
+    padding: 5px;
+}
+
+#taskbar button.active {
+    background-color: rgba(26, 27, 38, 0.7);
+    color: #0a9cf5;
+}
+
+#taskbar button:hover {
+    background-color: #0a0c24;
+}
+
 #workspaces button {
     color: #696a6e;
     min-width: 26px;
@@ -29,7 +43,7 @@ window#waybar {
 }
 
 #workspaces button.active {
-    background-color: rgba(26, 27, 38, 0.9);
+    background-color: rgba(26, 27, 38, 0.7);
     color: #0a9cf5;
 }
 

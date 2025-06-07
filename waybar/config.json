@@ -4,30 +4,29 @@
     "height": 46,
     "modules-left": [
         "custom/archlogo",
-        "hyprland/workspaces",
+        "niri/workspaces",
         "cpu",
         "custom/separator",
         "memory",
         "custom/separator",
-        "network" 
+        "network"
     ],
-    "modules-center": ["hyprland/window"],
+    "modules-center": ["wlr/taskbar"],
     "modules-right": [
-        "hyprland/language",
+        "niri/language",
         "custom/separator",
         "pulseaudio",
         "pulseaudio#microphone",
         "custom/separator",
-        "clock"
+        "clock",
+        "tray"
     ],
     "custom/archlogo": {
         "format": "󰣇",
         "tooltip": false,
         "on-click": "yofi"
     },
-    "hyprland/workspaces": {
-        "disable-scroll": true,
-        "separated-outputs": true
+    "niri/workspaces": {
     },
     "cpu": {
         "interval": 3,
@@ -55,11 +54,20 @@
         "format-alt": "󰩠  {ifname}: {ipaddr}/{cidr}",
         "tooltip-format": "{essid}: {ipaddr}"
     },
-    "hyprland/window": {
-        "max-length": 150,
-        "separate-outputs": true
+    "wlr/taskbar": {
+        "format": "{icon} {title}",
+        "tooltip": false,
+        "on-click": "activate",
+        "ignore-list": [
+			"File Upload", "org.telegram.desktop", "org.pulseaudio.pavucontrol"
+		],
+        "rewrite": {
+            "(.{0,40}).* — Zen Browser": "$1",
+            "nvim.*": "Nvim"
+        },
+        "icon-size": 32
     },
-    "hyprland/language": {
+    "niri/language": {
         "format": "{}",
         "format-en": "🇺🇸",
         "format-ru": "🇷🇺"

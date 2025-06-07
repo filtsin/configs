@@ -15,5 +15,6 @@ depends = ["common"]
 "nvim" = { target = "~/.config/nvim/", type = "symbolic" }
 "hypr" = "~/.config/hypr/"
 "fish" = "~/.config/fish"
+"niri" = "~/.config/niri"
 
 
