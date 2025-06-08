@@ -12,21 +12,25 @@ return {
         opts = {
             servers = {
                 rust_analyzer = {
-                    assist = {
-                        importGranularity = 'module',
-                        importPrefix = 'by_self'
-                    },
-                    inlayHints = {
-                        parameterHints = false,
-                    },
-                    checkOnSave = {
-                        command = 'clippy'
-                    },
-                    cargo = {
-                        allFeatures = true,
-                    },
-                    rustfmt = {
-                        extraArgs = { "+nightly" }
+                    settings = {
+                        ['rust-analyzer'] = {
+                            assist = {
+                                importGranularity = 'module',
+                                importPrefix = 'by_self'
+                            },
+                            inlayHints = {
+                                parameterHints = false,
+                            },
+                            check = {
+                                command = 'clippy'
+                            },
+                            cargo = {
+                                allFeatures = true,
+                            },
+                            rustfmt = {
+                                extraArgs = { "+nightly" }
+                            },
+                        }
                     },
                     on_attach = function(_, _)
                         vim.api.nvim_command [[

@@ -20,7 +20,7 @@ function M.get()
         { '<leader>x',  vim.lsp.buf.hover,  { desc = 'Hover symbol' } },
         { '<leader>n',
             function()
-                vim.diagnostic.jump({ count = 1, severity = vim.diagnostic.severity.ERROR })
+                vim.diagnostic.jump({ count = 1, severity = { vim.diagnostic.severity.ERROR, vim.diagnostic.severity.WARN } })
             end,
             { desc = 'Go to next diagnostic' }
         },

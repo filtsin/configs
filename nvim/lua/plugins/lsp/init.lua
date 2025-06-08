@@ -64,7 +64,6 @@ return {
                     return
                 end
 
-
                 local old_attach_cb = server_opts.on_attach
                 server_opts.on_attach = function(client, buf)
                     local inlayHintEnabled = server_opts._inlayHints

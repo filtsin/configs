@@ -18,6 +18,12 @@ return {
                             runtime = {
                                 version = 'LuaJIT'
                             },
+                            workspace = {
+                                checkThirdParty = false,
+                                library = {
+                                    vim.env.VIMRUNTIME
+                                }
+                            },
                             diagnostics = {
                                 -- Get the language server to recognize the 'vim', 'use' global
                                 globals = { 'vim', 'use' },
