@@ -65,6 +65,7 @@ return {
                 end
 
                 local old_attach_cb = server_opts.on_attach
+                local default_attach_cb = vim.lsp.config[server].on_attach
                 server_opts.on_attach = function(client, buf)
                     local inlayHintEnabled = server_opts._inlayHints
                     if inlayHintEnabled == nil then inlayHintEnabled = true end
@@ -78,7 +79,7 @@ return {
 
                     if codelens and client:supports_method('textDocument/codeLens') then
                         vim.lsp.codelens.refresh()
-                        vim.api.nvim_create_autocmd({'BufEnter', 'CursorHold', 'InsertLeave'}, {
+                        vim.api.nvim_create_autocmd({ 'BufEnter', 'CursorHold', 'InsertLeave' }, {
                             buffer = buf,
                             callback = vim.lsp.codelens.refresh
                         })
@@ -86,6 +87,10 @@ return {
 
                     if old_attach_cb ~= nil then
                         old_attach_cb(client, buf)
+                    end
+
+                    if default_attach_cb ~= nil then
+                        default_attach_cb(client, buf)
                     end
                 end
                 vim.lsp.config[server] = server_opts
@@ -121,6 +126,23 @@ return {
                 typos_lsp = {
                 }
             }
+        }
+    },
+
+    {
+        'nvimdev/lspsaga.nvim',
+        event = 'LspAttach',
+        opts = {
+            outline = {
+                win_position = "left",
+                win_width = 40,
+            },
+            diagnostic = {
+                on_insert = false
+            },
+            lightbulb = {
+                enable = false
+            },
         }
     },
 

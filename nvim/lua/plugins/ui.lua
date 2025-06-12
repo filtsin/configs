@@ -17,7 +17,7 @@ return {
     },
     {
         'stevearc/oil.nvim',
-        priority = 999,
+        priority =999,
         opts = {
             columns = { 'icon', 'size' },
         },

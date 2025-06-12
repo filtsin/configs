@@ -44,18 +44,4 @@ return {
         },
         opts = {}
     },
-    {
-        'stevearc/dressing.nvim',
-        opts = {
-            select = {
-                get_config = function(opts)
-                    if opts.kind == 'codeaction' then
-                        return {
-                            backend = 'telescope',
-                        }
-                    end
-                end
-            }
-        }
-    },
 }

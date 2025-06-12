@@ -8,16 +8,16 @@ function M.get()
     end
 
     M._keys = {
-        { 'gd',        vim.lsp.buf.definition, { desc = 'Goto definition' } },
         { '<leader>z', vim.lsp.buf.format,     { desc = 'Format current buffer' } },
-        { '<space>a',
-            function()
-                vim.lsp.buf.code_action({ apply = true })
-            end,
+        { '<space>a', '<cmd>Lspsaga code_action<CR>',
+            -- function()
+            --     vim.lsp.buf.code_action({ apply = false })
+            -- end,
             { desc = 'Code action' }
         },
         { '<leader>rn', vim.lsp.buf.rename, { desc = 'Rename' } },
         { '<leader>x',  vim.lsp.buf.hover,  { desc = 'Hover symbol' } },
+        { '<leader>o', '<cmd>Lspsaga outline<CR', { desc = 'LSP outline' } },
         { '<leader>n',
             function()
                 vim.diagnostic.jump({ count = 1, severity = { vim.diagnostic.severity.ERROR, vim.diagnostic.severity.WARN } })
@@ -45,7 +45,7 @@ function M.on_attach(buffer)
             vim.notify("Key binding is not valid entry: " .. vim.inspect(key), vim.log.levels.ERROR)
             return
         end
-        if type(key[2]) ~= 'function' then
+        if type(key[2]) ~= 'function' and type(key[2]) ~= 'string' then
             vim.notify('Key binding ' .. key[1] .. ' is not a valid function', vim.log.levels.ERROR)
             return
         end

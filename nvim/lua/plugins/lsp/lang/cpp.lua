@@ -19,7 +19,7 @@ return {
                         '--clang-tidy',
                     },
                     keys = {
-                        { '<space>t', ':ClangdSwitchSourceHeader<cr>', { desc = 'Switch Source/Header' } },
+                        { '<space>t', ':LspClangdSwitchSourceHeader<cr>', { desc = 'Switch Source/Header' } },
                     },
                     init_options = {
                         usePlaceholders = true,
