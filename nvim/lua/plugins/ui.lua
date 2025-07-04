@@ -13,6 +13,7 @@ return {
         config = function(_, opts)
             require('nightfox').setup(opts);
             vim.cmd('colorscheme nightfox')
+            vim.api.nvim_set_hl(0, 'NormalFloat', { link = 'None' })
         end,
     },
     {
@@ -66,6 +67,12 @@ return {
                     filter = {
                         event = "msg_show",
                         find = "Invalid offset LineCol",
+                    },
+                    opts = { skip = true },
+                },
+                {
+                    filter = {
+                        find = 'Highlight group',
                     },
                     opts = { skip = true },
                 }

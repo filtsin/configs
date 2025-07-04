@@ -10,3 +10,5 @@ alias grep="rg"
 
 zoxide init fish | source
 fzf_configure_bindings --directory=\cf
+
+starship init fish | source

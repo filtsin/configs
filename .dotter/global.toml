@@ -16,5 +16,7 @@ depends = ["common"]
 "hypr" = "~/.config/hypr/"
 "fish" = "~/.config/fish"
 "niri" = "~/.config/niri"
+"starship.toml" = "~/.config/starship.toml"
+"tofi.cfg" = "~/.config/tofi/config"
 
 

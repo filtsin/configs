@@ -8,6 +8,10 @@ input {
     focus-follows-mouse max-scroll-amount="0%"
 }
 
+hotkey-overlay {
+    skip-at-startup
+}
+
 cursor {
     xcursor-theme "phinger-cursors-dark"
     xcursor-size 32
@@ -99,8 +103,8 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     Mod+W { spawn "zen-browser"; }
-    Mod+Return { spawn "wezterm"; }
-    Mod+R { spawn "yofi"; }
+    Mod+Return { spawn "alacritty"; }
+    Mod+R { spawn "tofi-drun" "--drun-launch=true"; }
 
     Mod+Z { toggle-overview; }
 

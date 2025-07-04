@@ -1,5 +1,5 @@
 [font]
-size = 22.0
+size = 18.0
 
 [window]
 padding = { x = 15, y = 10 }
@@ -12,7 +12,7 @@ draw_bold_text_with_bright_colors = true
 
 [colors.primary]
 foreground = "#c5c8c6"
-background = "#151515" # 131f21 looks fancy
+background = "#1d1f21"
 
 # Normal colors
 [colors.normal]

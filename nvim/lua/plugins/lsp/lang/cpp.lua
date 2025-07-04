@@ -22,6 +22,7 @@ return {
                         { '<space>t', ':LspClangdSwitchSourceHeader<cr>', { desc = 'Switch Source/Header' } },
                     },
                     init_options = {
+                        fallbackFlags = { '-std=c++23', '-stdlib=libc++' },
                         usePlaceholders = true,
                         completeUnimported = true,
                         clangdFileStatus = true

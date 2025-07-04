@@ -24,5 +24,8 @@ return {
             }
         },
         opts_extend = { 'ensure_installed' },
+        config = function(_, opts)
+            require('nvim-treesitter.configs').setup(opts)
+        end,
     }
 }

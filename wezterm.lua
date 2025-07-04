@@ -8,7 +8,7 @@ local config = {}
 -- In newer versions of wezterm, use the config_builder which will
 -- help provide clearer error messages
 if wezterm.config_builder then
-  config = wezterm.config_builder()
+    config = wezterm.config_builder()
 end
 
 config.default_prog = { '/usr/bin/fish' }
@@ -35,10 +35,30 @@ config.keys = {
         key = 't',
         mods = 'CTRL',
         action = act.SpawnTab('CurrentPaneDomain')
-    }
+    },
+    {
+        key = 'q',
+        mods = 'CTRL',
+        action = act.ActivateCopyMode
+    },
+    {
+        key = 'C',
+        mods = 'CTRL',
+        action = wezterm.action.CopyTo 'Clipboard',
+    },
+    { key = 'V', mods = 'CTRL', action = act.PasteFrom 'Clipboard' },
+
 }
 
-for i = 1,8 do
+config.mouse_bindings = {
+  {
+    event = { Up = { streak = 1, button = "Left" } },
+    mods = "NONE",
+    action = wezterm.action.OpenLinkAtMouseCursor,
+  },
+}
+
+for i = 1, 8 do
     table.insert(config.keys, {
         key = tostring(i),
         mods = 'CTRL',
@@ -47,4 +67,3 @@ for i = 1,8 do
 end
 
 return config
-
