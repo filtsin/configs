@@ -25,6 +25,12 @@ return {
         config = function(_, opts)
             require('oil').setup(opts)
             vim.api.nvim_create_user_command('Exp', function() require('oil').open() end, {})
+            vim.keymap.set('n', '<leader>t', function()
+                local current_dir = require('oil').get_current_dir()
+                vim.cmd('cd ' .. current_dir)
+                vim.cmd('terminal')
+                vim.cmd('startinsert')
+            end)
         end,
     },
     {

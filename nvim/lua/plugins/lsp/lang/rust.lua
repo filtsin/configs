@@ -30,6 +30,9 @@ return {
                             rustfmt = {
                                 extraArgs = { "+nightly" }
                             },
+                            lens = {
+                                enable = false,
+                            },
                         }
                     },
                     on_attach = function(_, _)

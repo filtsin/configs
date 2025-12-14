@@ -7,13 +7,10 @@ font_name = "JetBrains Mono"
 depends = ["common"]
 
 [default.files]
-"yofi.toml" = "~/.config/yofi/yofi.config"
 "waybar/config.json" = "~/.config/waybar/config"
 "waybar/style.css" = "~/.config/waybar/style.css"
-"wezterm.lua" = "~/.wezterm.lua"
 "alacritty" = "~/.config/alacritty"
 "nvim" = { target = "~/.config/nvim/", type = "symbolic" }
-"hypr" = "~/.config/hypr/"
 "fish" = "~/.config/fish"
 "niri" = "~/.config/niri"
 "starship.toml" = "~/.config/starship.toml"
