@@ -8,11 +8,7 @@ return {
             diagnostics = {
                 underline = true,
                 update_in_insert = false,
-                virtual_text = {
-                    spacing = 4,
-                    source = "if_many",
-                    prefix = "icons",
-                },
+                virtual_text = false,
                 severity_sort = true,
                 signs = { -- false to disable
                     text = {
@@ -144,6 +140,17 @@ return {
                 enable = false
             },
         }
+    },
+
+    {
+        "rachartier/tiny-inline-diagnostic.nvim",
+        event = "VeryLazy",
+        priority = 1000,
+        config = function()
+            require("tiny-inline-diagnostic").setup({
+                preset = "simple",
+            })
+        end,
     },
 
     { import = 'plugins.lsp.lang' }
