@@ -13,7 +13,8 @@ return {
         config = function(_, opts)
             require('nightfox').setup(opts);
             vim.cmd('colorscheme nightfox')
-            vim.api.nvim_set_hl(0, 'NormalFloat', { link = 'None' })
+            vim.api.nvim_set_hl(0, 'NormalFloat', { bg = '#303030' })
+            vim.api.nvim_set_hl(0, 'CmpNormal', { bg = '#303030' })
         end,
     },
     {
@@ -79,6 +80,12 @@ return {
                 {
                     filter = {
                         find = 'Highlight group',
+                    },
+                    opts = { skip = true },
+                },
+                {
+                    filter = {
+                        find = 'No code actions available',
                     },
                     opts = { skip = true },
                 }

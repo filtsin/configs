@@ -1,4 +1,4 @@
-set PATH /home/filtsin/.local/bin /home/filtsin/.cargo/bin/ /opt/clang-format-static $PATH
+set PATH /home/filtsin/.local/bin /home/filtsin/.cargo/bin/ /home/filtsin/go/bin /opt/clang-format-static $PATH
 export LANG="en_US.UTF-8"
 export LC_ALL="C"
 export EDITOR=nvim

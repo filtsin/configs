@@ -12,7 +12,10 @@ return {
                 'vim',
                 'bash',
                 'markdown',
-                'markdown_inline'
+                'markdown_inline',
+                'cpp',
+                'go',
+                'python',
             },
             highlight = {
                 enable = true

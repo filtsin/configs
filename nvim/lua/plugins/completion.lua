@@ -49,10 +49,10 @@ return {
             return {
                 window = {
                     documentation = cmp.config.window.bordered({
-                        winhighlight = "normal:normal,floatborder:borderbg,cursorline:pmenusel,search:none"
+                        winhighlight = "Normal:CmpNormal"
                     }),
                     completion = cmp.config.window.bordered({
-                        winhighlight = "normal:normal,floatborder:borderbg,cursorline:pmenusel,search:none"
+                        winhighlight = "Normal:CmpNormal"
                     }),
                 },
                 sources = {
