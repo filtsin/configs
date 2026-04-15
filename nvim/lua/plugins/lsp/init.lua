@@ -74,10 +74,10 @@ return {
                     end
 
                     if codelens and client:supports_method('textDocument/codeLens') then
-                        vim.lsp.codelens.refresh()
+                        vim.lsp.codelens.enable(true)
                         vim.api.nvim_create_autocmd({ 'BufEnter', 'CursorHold', 'InsertLeave' }, {
                             buffer = buf,
-                            callback = vim.lsp.codelens.refresh
+                            callback = function() vim.lsp.codelens.enable(true) end,
                         })
                     end
 
