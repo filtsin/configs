@@ -2,7 +2,6 @@ return {
     {
         'nvim-treesitter/nvim-treesitter',
         dependencies = { 'nvim-treesitter/nvim-treesitter-context' },
-        branch = 'master',
         build = ':TSUpdate',
         lazy = vim.fn.argc(-1) == 0, -- load treesitter early when opening a file from the cmdline
         event = { 'VeryLazy' },
@@ -39,7 +38,20 @@ return {
         },
         opts_extend = { 'ensure_installed' },
         config = function(_, opts)
-            require('nvim-treesitter.configs').setup(opts)
+            require('nvim-treesitter')
+                .install(
+                    {
+                        'regex',
+                        'vim',
+                        'bash',
+                        'markdown',
+                        'markdown_inline',
+                        'cpp',
+                        'go',
+                        'python',
+                        'rust',
+                    }
+                )
         end,
     }
 }

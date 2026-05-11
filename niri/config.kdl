@@ -8,6 +8,10 @@ input {
     focus-follows-mouse max-scroll-amount="0%"
 }
 
+environment {
+  QT_QPA_PLATFORMTHEME "qt6ct"
+}
+
 hotkey-overlay {
     skip-at-startup
 }
@@ -59,16 +63,11 @@ layout {
     }
 }
 
-spawn-at-startup "waybar"
-spawn-at-startup "sh" "-c" "swaybg -i ~/.config/niri/bg.jpg -m fill"
+// spawn-at-startup "waybar"
+// spawn-at-startup "sh" "-c" "swaybg -i ~/.config/niri/bg.jpg -m fill"
+spawn-at-startup "qs" "-c" "noctalia-shell"
 prefer-no-csd
 screenshot-path null
-
-// Work around WezTerm's initial configure bug
-// by setting an empty default-column-width.
-window-rule {
-    match app-id="yofi"
-}
 
 window-rule {
     match app-id="zen"
@@ -85,6 +84,11 @@ window-rule {
     clip-to-geometry true
     opacity 0.97
     draw-border-with-background false
+}
+
+debug {
+  // Allows notification actions and window activation from Noctalia.
+  honor-xdg-activation-with-invalid-serial
 }
 
 binds {
@@ -283,7 +287,7 @@ binds {
     // Makes the column "fill the rest of the space".
     Mod+Ctrl+F { expand-column-to-available-width; }
 
-    Mod+C { center-column; }
+    Mod+C { spawn-sh "qs -c noctalia-shell ipc call controlCenter toggle"; }
 
     // Finer width adjustments.
     // This command can also:

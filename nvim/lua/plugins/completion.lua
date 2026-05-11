@@ -29,6 +29,17 @@ local shift_tab_mapping = function()
     end, { "i", "s" })
 end
 
+local snippet_forward = function()
+    local cmp = require('cmp')
+    return cmp.mapping(function(fallback)
+        if vim.snippet.active({ direction = 1 }) then
+            vim.snippet.jump(1)
+        else
+            fallback()
+        end
+    end, { 'i', 's' })
+end
+
 return {
     {
         'hrsh7th/nvim-cmp',
@@ -66,7 +77,8 @@ return {
                     ['<CR>'] = cmp.mapping.confirm(),
                     ['<Tab>'] = tab_mapping(),
                     ['<S-Tab>'] = shift_tab_mapping(),
-                    ['<C-e>'] = cmp.mapping.close()
+                    ['<C-e>'] = cmp.mapping.close(),
+                    ['<C-l>'] = snippet_forward()
                 },
                 formatting = {
                     format = require('lspkind').cmp_format({

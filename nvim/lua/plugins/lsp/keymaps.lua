@@ -17,7 +17,7 @@ function M.get()
         },
         { '<leader>rn', vim.lsp.buf.rename, { desc = 'Rename' } },
         { '<leader>x',  vim.lsp.buf.hover,  { desc = 'Hover symbol' } },
-        { '<leader>o', '<cmd>Lspsaga outline<CR', { desc = 'LSP outline' } },
+        { '<leader>o', '<cmd>Lspsaga outline<CR>', { desc = 'LSP outline' } },
         { '<leader>n',
             function()
                 vim.diagnostic.jump({ count = 1, severity = { vim.diagnostic.severity.ERROR, vim.diagnostic.severity.WARN } })
