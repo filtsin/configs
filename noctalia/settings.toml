@@ -1,0 +1,137 @@
+[backdrop]
+blur_intensity = 0.10999999940395355
+
+[bar]
+order = [ "default" ]
+
+    [bar.default]
+    end = [
+        "tray",
+        "notifications",
+        "media",
+        "clipboard",
+        "keyboard_layout",
+        "network",
+        "bluetooth",
+        "volume",
+        "brightness",
+        "battery"
+    ]
+    scale = 1.2000000476837158
+    start = [ "control-center", "workspaces", "ram", "temp", "cpu" ]
+    widget_spacing = 10
+
+[desktop_widgets]
+enabled = false
+
+[dock]
+active_monitor_only = true
+background_opacity = 0.29999998211860657
+enabled = true
+icon_size = 24
+item_spacing = 0
+margin_edge = 0
+padding = 0
+position = "left"
+shadow = false
+
+[shell]
+font_family = "JetBrains Mono"
+password_style = "random"
+polkit_agent = true
+settings_show_advanced = true
+telemetry_enabled = false
+ui_scale = 1.2999999523162842
+
+    [shell.panel]
+    open_near_click_control_center = true
+
+    [[shell.session.actions]]
+    action = "lock"
+    enabled = true
+    shortcut = "1"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "logout"
+    enabled = false
+    shortcut = "2"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "suspend"
+    enabled = true
+    shortcut = "3"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "reboot"
+    enabled = true
+    shortcut = "4"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "shutdown"
+    enabled = true
+    shortcut = "5"
+    variant = "destructive"
+
+[theme]
+source = "wallpaper"
+
+    [theme.templates]
+    builtin_ids = [ "niri" ]
+    community_ids = [ "zed", "telegram" ]
+
+[wallpaper]
+directory = "/home/filtsin/configs/niri"
+
+    [wallpaper.default]
+    path = "/home/filtsin/configs/niri/bg.jpg"
+
+    [wallpaper.last]
+    path = "/home/filtsin/configs/niri/bg.jpg"
+
+    [wallpaper.monitors.DP-1]
+    path = "/home/filtsin/configs/niri/bg.jpg"
+
+    [wallpaper.monitors.HDMI-A-2]
+    path = "/home/filtsin/configs/niri/bg.jpg"
+
+[weather]
+address = "Sankt Petersburg"
+
+[widget.1]
+glyph = "hanger"
+type = "custom_button"
+
+[widget.Openvpn]
+command = "pkexec openvpn --cd /etc/openvpn --config filtsin.conf"
+glyph = "brand-openvpn"
+type = "custom_button"
+
+[widget.bongocat]
+audio_spectrum = true
+rave_mode = true
+scope = "shared"
+script = "scripts/bongocat.lua"
+tappy_mode = true
+type = "scripted"
+use_mpris_filter = true
+
+[widget.media]
+hide_when_no_media = true
+max_length = 130.0
+title_scroll = "on_hover"
+
+[widget.notifications]
+hide_when_no_unread = true
+
+[widget.sysmon]
+display = "text"
+stat = "ram_used"
+
+[widget.workspaces]
+hide_when_empty = true
+minimal = true
+occupied_color = "outline"

@@ -15,5 +15,6 @@ depends = ["common"]
 "niri" = "~/.config/niri"
 "starship.toml" = "~/.config/starship.toml"
 "tofi.cfg" = "~/.config/tofi/config"
+"noctalia" = "~/.local/state/noctalia"
 
 

@@ -50,6 +50,7 @@ return {
                         'go',
                         'python',
                         'rust',
+                        'toml'
                     }
                 )
         end,

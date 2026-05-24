@@ -1,0 +1,329 @@
+{
+  "entries": [
+    {
+      "byte_size": 51,
+      "captured_at_ms": 1779629335238,
+      "data_mime_type": "text/plain;charset=utf-8",
+      "id": "1779629335238-8",
+      "mime_types": [
+        "text/plain;charset=utf-8",
+        "UTF8_STRING",
+        "COMPOUND_TEXT",
+        "TEXT",
+        "text/plain",
+        "STRING",
+        "text/plain;charset=utf-8",
+        "text/plain;charset=ANSI_X3.4-1968",
+        "text/plain",
+        "SAVE_TARGETS"
+      ],
+      "payload_path": "/home/filtsin/.local/state/noctalia/clipboard/entries/1779629335238-8.bin",
+      "pinned": false,
+      "text_preview": "tracy::GetProfiler_CFG_E1_OD1_DI0_ML0_F0_DHT0_TF0()"
+    },
+    {
+      "byte_size": 77,
+      "captured_at_ms": 1779629295141,
+      "data_mime_type": "text/plain;charset=utf-8",
+      "id": "1779629295141-7",
+      "mime_types": [
+        "text/plain;charset=utf-8",
+        "UTF8_STRING",
+        "text/plain"
+      ],
+      "payload_path": "/home/filtsin/.local/state/noctalia/clipboard/entries/1779629295141-7.bin",
+      "pinned": false,
+      "text_preview": " undefined reference to `tracy::GetProfiler_CFG_E1_OD1_DI0_ML0_F0_DHT0_TF0()'"
+    },
+    {
+      "byte_size": 106,
+      "captured_at_ms": 1779629189519,
+      "data_mime_type": "text/plain;charset=utf-8",
+      "id": "1779629189519-6",
+      "mime_types": [
+        "text/html",
+        "text/plain;charset=utf-8",
+        "UTF8_STRING",
+        "COMPOUND_TEXT",
+        "TEXT",
+        "text/plain",
+        "STRING",
+        "text/plain;charset=utf-8",
+        "text/plain;charset=ANSI_X3.4-1968",
+        "text/plain",
+        "SAVE_TARGETS"
+      ],
+      "payload_path": "/home/filtsin/.local/state/noctalia/clipboard/entries/1779629189519-6.bin",
+      "pinned": false,
+      "text_preview": "target_link_libraries(app PRIVATE Tracy::TracyClient) target_compile_definitions(app PRIVATE TRACY_ENABLE)"
+    },
+    {
+      "byte_size": 44,
+      "captured_at_ms": 1779625909876,
+      "data_mime_type": "text/plain;charset=utf-8",
+      "id": "1779625909876-5",
+      "mime_types": [
+        "text/plain;charset=utf-8",
+        "UTF8_STRING",
+        "COMPOUND_TEXT",
+        "TEXT",
+        "text/plain",
+        "STRING",
+        "text/plain;charset=utf-8",
+        "text/plain;charset=ANSI_X3.4-1968",
+        "text/plain",
+        "SAVE_TARGETS"
+      ],
+      "payload_path": "/home/filtsin/.local/state/noctalia/clipboard/entries/1779625909876-5.bin",
+      "pinned": false,
+      "text_preview": "https://github.com/wolfpld/tracy/tree/master"
+    },
+    {
+      "byte_size": 74,
+      "captured_at_ms": 1779625603761,
+      "data_mime_type": "text/plain;charset=utf-8",
+      "id": "1779625603761-4",
+      "mime_types": [
+        "text/plain;charset=utf-8",
+        "UTF8_STRING",
+        "text/plain"
+      ],
+      "payload_path": "/home/filtsin/.local/state/noctalia/clipboard/entries/1779625603761-4.bin",
+      "pinned": false,
+      "text_preview": "error: no class template named 'rebind' in 'class std::allocator<std::pair"
+    },
+    {
+      "byte_size": 44,
+      "captured_at_ms": 1779625268366,
+      "data_mime_type": "text/plain;charset=utf-8",
+      "id": "1779625268366-3",
+      "mime_types": [
+        "text/plain;charset=utf-8",
+        "UTF8_STRING",
+        "COMPOUND_TEXT",
+        "TEXT",
+        "text/plain",
+        "STRING",
+        "text/plain;charset=utf-8",
+        "text/plain;charset=ANSI_X3.4-1968",
+        "text/plain",
+        "SAVE_TARGETS"
+      ],
+      "payload_path": "/home/filtsin/.local/state/noctalia/clipboard/entries/1779625268366-3.bin",
+      "pinned": false,
+      "text_preview": "https://github.com/wolfpld/tracy/tree/master"
+    },
+    {
+      "byte_size": 12,
+      "captured_at_ms": 1779624784135,
+      "data_mime_type": "text/plain;charset=utf-8",
+      "id": "1779624784135-2",
+      "mime_types": [
+        "text/plain;charset=utf-8",
+        "UTF8_STRING",
+        "COMPOUND_TEXT",
+        "TEXT",
+        "text/plain",
+        "STRING",
+        "text/plain;charset=utf-8",
+        "text/plain;charset=ANSI_X3.4-1968",
+        "text/plain",
+        "SAVE_TARGETS"
+      ],
+      "payload_path": "/home/filtsin/.local/state/noctalia/clipboard/entries/1779624784135-2.bin",
+      "pinned": false,
+      "text_preview": "TRACY_STATIC"
+    },
+    {
+      "byte_size": 32,
+      "captured_at_ms": 1779624754125,
+      "data_mime_type": "text/plain;charset=utf-8",
+      "id": "1779624754125-1",
+      "mime_types": [
+        "text/plain;charset=utf-8",
+        "UTF8_STRING",
+        "COMPOUND_TEXT",
+        "TEXT",
+        "text/plain",
+        "STRING",
+        "text/plain;charset=utf-8",
+        "text/plain;charset=ANSI_X3.4-1968",
+        "text/plain",
+        "SAVE_TARGETS"
+      ],
+      "payload_path": "/home/filtsin/.local/state/noctalia/clipboard/entries/1779624754125-1.bin",
+      "pinned": false,
+      "text_preview": "https://github.com/wolfpld/tracy"
+    },
+    {
+      "byte_size": 52,
+      "captured_at_ms": 1779624288147,
+      "data_mime_type": "text/plain;charset=utf-8",
+      "id": "1779624288147-5",
+      "mime_types": [
+        "text/plain;charset=utf-8",
+        "UTF8_STRING",
+        "text/plain"
+      ],
+      "payload_path": "/home/filtsin/.local/state/noctalia/clipboard/entries/1779624288147-5.bin",
+      "pinned": false,
+      "text_preview": "sudo openvpn --cd /etc/openvpn --config filtsin.conf"
+    },
+    {
+      "byte_size": 47,
+      "captured_at_ms": 1779624286275,
+      "data_mime_type": "text/plain;charset=utf-8",
+      "id": "1779624286275-4",
+      "mime_types": [
+        "text/plain;charset=utf-8",
+        "UTF8_STRING",
+        "text/plain"
+      ],
+      "payload_path": "/home/filtsin/.local/state/noctalia/clipboard/entries/1779624286275-4.bin",
+      "pinned": false,
+      "text_preview": "openvpn --cd /etc/openvpn --config filtsin.conf"
+    },
+    {
+      "byte_size": 19,
+      "captured_at_ms": 1779624208096,
+      "data_mime_type": "text/plain;charset=utf-8",
+      "id": "1779624208096-3",
+      "mime_types": [
+        "text/html",
+        "text/_moz_htmlcontext",
+        "text/_moz_htmlinfo",
+        "text/plain;charset=utf-8",
+        "UTF8_STRING",
+        "COMPOUND_TEXT",
+        "TEXT",
+        "text/plain",
+        "STRING",
+        "text/plain;charset=utf-8",
+        "text/plain;charset=ANSI_X3.4-1968",
+        "text/plain",
+        "text/x-moz-url-priv",
+        "SAVE_TARGETS"
+      ],
+      "payload_path": "/home/filtsin/.local/state/noctalia/clipboard/entries/1779624208096-3.bin",
+      "pinned": false,
+      "text_preview": "id -nG | grep input"
+    },
+    {
+      "byte_size": 21,
+      "captured_at_ms": 1779624163219,
+      "data_mime_type": "text/plain;charset=utf-8",
+      "id": "1779624163219-2",
+      "mime_types": [
+        "text/html",
+        "text/_moz_htmlcontext",
+        "text/_moz_htmlinfo",
+        "text/plain;charset=utf-8",
+        "UTF8_STRING",
+        "COMPOUND_TEXT",
+        "TEXT",
+        "text/plain",
+        "STRING",
+        "text/plain;charset=utf-8",
+        "text/plain;charset=ANSI_X3.4-1968",
+        "text/plain",
+        "text/x-moz-url-priv",
+        "SAVE_TARGETS"
+      ],
+      "payload_path": "/home/filtsin/.local/state/noctalia/clipboard/entries/1779624163219-2.bin",
+      "pinned": false,
+      "text_preview": "sudo pacman -S evtest"
+    },
+    {
+      "byte_size": 1,
+      "captured_at_ms": 1779623852931,
+      "data_mime_type": "text/plain;charset=utf-8",
+      "id": "1779623852931-1",
+      "mime_types": [
+        "text/plain",
+        "text/plain",
+        "text/plain;charset=utf-8",
+        "TEXT",
+        "STRING",
+        "UTF8_STRING"
+      ],
+      "payload_path": "/home/filtsin/.local/state/noctalia/clipboard/entries/1779623852931-1.bin",
+      "pinned": false,
+      "text_preview": ";"
+    },
+    {
+      "byte_size": 20,
+      "captured_at_ms": 1779479492782,
+      "data_mime_type": "text/plain;charset=utf-8",
+      "id": "1779479492782-3",
+      "mime_types": [
+        "text/html",
+        "text/_moz_htmlcontext",
+        "text/_moz_htmlinfo",
+        "text/plain;charset=utf-8",
+        "UTF8_STRING",
+        "COMPOUND_TEXT",
+        "TEXT",
+        "text/plain",
+        "STRING",
+        "text/plain;charset=utf-8",
+        "text/plain;charset=ANSI_X3.4-1968",
+        "text/plain",
+        "text/x-moz-url-priv",
+        "SAVE_TARGETS"
+      ],
+      "payload_path": "/home/filtsin/.local/state/noctalia/clipboard/entries/1779479492782-3.bin",
+      "pinned": false,
+      "text_preview": "NOCTALIA_CONFIG_HOME"
+    },
+    {
+      "byte_size": 162,
+      "captured_at_ms": 1779479331119,
+      "data_mime_type": "text/plain;charset=utf-8",
+      "id": "1779479331119-2",
+      "mime_types": [
+        "text/html",
+        "text/_moz_htmlcontext",
+        "text/_moz_htmlinfo",
+        "text/plain;charset=utf-8",
+        "UTF8_STRING",
+        "COMPOUND_TEXT",
+        "TEXT",
+        "text/plain",
+        "STRING",
+        "text/plain;charset=utf-8",
+        "text/plain;charset=ANSI_X3.4-1968",
+        "text/plain",
+        "text/x-moz-url-priv",
+        "SAVE_TARGETS"
+      ],
+      "payload_path": "/home/filtsin/.local/state/noctalia/clipboard/entries/1779479331119-2.bin",
+      "pinned": false,
+      "text_preview": "window-rule {   match app-id=\"dev.noctalia.Noctalia.Settings\"   open-floating true   default-column-width { fixed 1080; }   default-window-height { fixed 920; } }"
+    },
+    {
+      "byte_size": 20,
+      "captured_at_ms": 1779477260497,
+      "data_mime_type": "text/plain;charset=utf-8",
+      "id": "1779477260497-1",
+      "mime_types": [
+        "text/html",
+        "text/_moz_htmlcontext",
+        "text/_moz_htmlinfo",
+        "text/plain;charset=utf-8",
+        "UTF8_STRING",
+        "COMPOUND_TEXT",
+        "TEXT",
+        "text/plain",
+        "STRING",
+        "text/plain;charset=utf-8",
+        "text/plain;charset=ANSI_X3.4-1968",
+        "text/plain",
+        "text/x-moz-url-priv",
+        "SAVE_TARGETS"
+      ],
+      "payload_path": "/home/filtsin/.local/state/noctalia/clipboard/entries/1779477260497-1.bin",
+      "pinned": false,
+      "text_preview": "paru -S noctalia-git"
+    }
+  ]
+}
