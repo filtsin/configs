@@ -62,6 +62,8 @@ return {
 
                 local old_attach_cb = server_opts.on_attach
                 local default_attach_cb = vim.lsp.config[server].on_attach
+
+
                 server_opts.on_attach = function(client, buf)
                     local inlayHintEnabled = server_opts._inlayHints
                     if inlayHintEnabled == nil then inlayHintEnabled = true end
@@ -77,6 +79,7 @@ return {
                         vim.lsp.codelens.enable(true)
                         vim.api.nvim_create_autocmd({ 'BufEnter', 'CursorHold', 'InsertLeave' }, {
                             buffer = buf,
+                            once = true,
                             callback = function() vim.lsp.codelens.enable(true) end,
                         })
                     end
@@ -89,7 +92,8 @@ return {
                         default_attach_cb(client, buf)
                     end
                 end
-                vim.lsp.config[server] = server_opts
+
+                vim.lsp.config(server, server_opts)
                 vim.lsp.enable(server)
             end
 

@@ -8,16 +8,26 @@ return {
         'neovim/nvim-lspconfig',
         dependencies = {
             'mason-org/mason-lspconfig.nvim',
-            opts = { ensure_installed = { 'clangd' } },
+            -- opts = { ensure_installed = { 'clangd' } },
         },
         opts = {
             servers = {
                 clangd = {
-                    cmd = {
-                        'clangd',
-                        '--background-index',
-                        '--clang-tidy',
-                    },
+                    cmd = function(dispatchers, config)
+                        local root = config.root_dir
+                        local cmd = {
+                            'clangd',
+                            '--background-index',
+                            '--clang-tidy',
+                            '--experimental-modules-support',
+                            -- Hack for `import std` module work, because clangd will find compile_commands.json
+                            -- in /usr/include* and not in the root compile_commands.json of project
+                            -- https://github.com/clangd/clangd/issues/2610
+                            '--compile-commands-dir=' .. root
+                        }
+
+                        return vim.lsp.rpc.start(cmd, dispatchers)
+                    end,
                     keys = {
                         { '<space>t', ':LspClangdSwitchSourceHeader<cr>', { desc = 'Switch Source/Header' } },
                     },
