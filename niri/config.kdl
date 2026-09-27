@@ -27,9 +27,12 @@ output "DP-1" {
     scale 1.5
 }
 
-output "HDMI-A-1" {
-    mode "3840x2160"
-    scale 1.5
+output "HDMI-A-2" {
+    mode "1920x1080"
+    transform "270"
+    layout {
+        default-column-width { proportion 1.0; }
+    }
 }
 
 gestures {

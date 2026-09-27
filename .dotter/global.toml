@@ -9,12 +9,14 @@ depends = ["common"]
 [default.files]
 "waybar/config.json" = "~/.config/waybar/config"
 "waybar/style.css" = "~/.config/waybar/style.css"
-"alacritty" = "~/.config/alacritty"
+# "alacritty" = "~/.config/alacritty"
 "nvim" = { target = "~/.config/nvim/", type = "symbolic" }
 "fish" = "~/.config/fish"
 "niri" = "~/.config/niri"
 "starship.toml" = "~/.config/starship.toml"
 "tofi.cfg" = "~/.config/tofi/config"
-"noctalia" = "~/.local/state/noctalia"
+"pi/extensions" = "~/.pi/agent/extensions/"
+
+# "noctalia" = "~/.local/state/noctalia"
 
 
